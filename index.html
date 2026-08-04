@@ -88,14 +88,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .bg-mosaic {
-            background-image: url('images/Mosaic.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-blend-mode: multiply;
-        }
     </style>
 </head>
 <body class="antialiased selection:bg-fdi-orange selection:text-white">
@@ -123,18 +115,13 @@
     </nav>
 
     <main>
-        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center bg-mosaic bg-black/80">
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-[90vh] flex items-center bg-[#080808]" style="background-image: url('images/Mosaic.png'); background-size: cover; background-position: center;">
             
-            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up w-full">
                 
-                <img src="images/Full Logo.png" alt="FDI Technology Full Logo" class="mx-auto h-24 md:h-32 mb-8 object-contain">
+                <img src="images/Full Logo.png" alt="FDI Technology Full Logo" class="mx-auto h-auto w-[600px] max-w-full mb-10 object-contain">
                 
-                <h1 class="font-tech text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 uppercase text-white leading-tight">
-                    Research Driven <br class="hidden md:block" />
-                    Intelligent Solutions
-                </h1>
-                
-                <p class="mt-4 max-w-3xl text-lg md:text-xl text-fdi-gray mx-auto mb-10 leading-relaxed font-mono text-sm md:text-base">
+                <p class="mt-4 max-w-3xl text-lg md:text-xl text-fdi-light mx-auto mb-10 leading-relaxed font-mono text-sm md:text-base bg-black/40 p-4 rounded-sm backdrop-blur-sm">
                     We are a university approved start-up company that transforms proven university research into reliable digital services to create meaningful digital solutions.
                 </p>
                 
@@ -148,23 +135,23 @@
 
         <section class="border-y border-white/5 bg-[#080808] py-12 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-10">
                     <h3 class="font-tech text-3xl font-bold uppercase tracking-wider">Trusted Partner</h3>
                     <span class="text-fdi-orange font-mono text-sm tracking-widest uppercase">Licensed & Compliant</span>
                 </div>
                 
-                <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                    <a href="https://www.umpsa.edu.my" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
-                        <img src="images/UMPSA Logo.png" alt="UMPSA" class="h-16 w-auto object-contain">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
+                    <a href="https://www.umpsa.edu.my" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-white p-6 h-28 md:h-32 rounded-sm hover:scale-105 transition-transform shadow-lg">
+                        <img src="images/UMPSA Logo.png" alt="UMPSA" class="max-h-full max-w-full object-contain">
                     </a>
-                    <a href="https://caidas.umpsa.edu.my" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
-                        <img src="images/CAIDAS Logo.png" alt="CAIDaS" class="h-16 w-auto object-contain">
+                    <a href="https://caidas.umpsa.edu.my" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-white p-6 h-28 md:h-32 rounded-sm hover:scale-105 transition-transform shadow-lg">
+                        <img src="images/CAIDAS Logo.png" alt="CAIDaS" class="max-h-full max-w-full object-contain">
                     </a>
-                    <a href="https://www.dvs.gov.my" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
-                        <img src="images/DVS Logo.jpeg" alt="DVS" class="h-16 w-auto object-contain">
+                    <a href="https://www.dvs.gov.my" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-white p-6 h-28 md:h-32 rounded-sm hover:scale-105 transition-transform shadow-lg">
+                        <img src="images/DVS Logo.jpeg" alt="DVS" class="max-h-full max-w-full object-contain">
                     </a>
-                    <a href="https://www.trinoviklabs.com" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
-                        <img src="images/TL Logo.jpeg" alt="Trinovik Labs" class="h-16 w-auto object-contain">
+                    <a href="https://www.trinoviklabs.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center bg-white p-6 h-28 md:h-32 rounded-sm hover:scale-105 transition-transform shadow-lg">
+                        <img src="images/TL Logo.jpeg" alt="Trinovik Labs" class="max-h-full max-w-full object-contain">
                     </a>
                 </div>
             </div>
@@ -337,20 +324,25 @@
                     <h3 class="font-tech text-2xl font-bold text-white uppercase tracking-wider mb-2">Consultation Request</h3>
                     <p class="text-fdi-gray font-mono text-sm mb-8">Please fill out this form to inquire about our digital services.</p>
                     
-                    <form class="space-y-6">
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="form-success-message" class="hidden bg-fdi-orange/20 border border-fdi-orange text-white p-6 mb-6 font-mono text-sm leading-relaxed rounded-sm">
+                        Your request has been submitted. We will get back to you the soonest!
+                    </div>
+
+                    <form id="contact-form" class="space-y-6">
                         <div>
                             <label class="block text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Name *</label>
-                            <input type="text" placeholder="YOUR NAME" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors">
+                            <input type="text" name="name" required placeholder="YOUR NAME" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors">
                         </div>
                         <div>
                             <label class="block text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Email *</label>
-                            <input type="email" placeholder="YOUR EMAIL" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors">
+                            <input type="email" name="email" required placeholder="YOUR EMAIL" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors">
                         </div>
                         <div>
                             <label class="block text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Message *</label>
-                            <textarea rows="4" placeholder="YOUR MESSAGE" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors resize-none"></textarea>
+                            <textarea name="message" rows="4" required placeholder="YOUR MESSAGE" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors resize-none"></textarea>
                         </div>
-                        <button type="button" class="w-full bg-fdi-orange text-black font-tech text-lg font-bold py-4 hover:bg-fdi-orangeHover transition-colors uppercase tracking-wider">
+                        <button type="submit" class="w-full bg-fdi-orange text-black font-tech text-lg font-bold py-4 hover:bg-fdi-orangeHover transition-colors uppercase tracking-wider">
                             Send Inquiry
                         </button>
                     </form>
@@ -386,6 +378,47 @@
                 nav.classList.remove('shadow-lg', 'bg-[#050505]');
                 nav.classList.add('bg-black/85');
             }
+        });
+
+        // Handle Contact Form Submission via FormSubmit AJAX
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const successMessage = document.getElementById('form-success-message');
+            
+            // Provide visual feedback while sending
+            submitBtn.innerText = 'SENDING...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            // Send the data securely to FormSubmit (routes to sales@fdi-tech.com)
+            fetch('https://formsubmit.co/ajax/sales@fdi-tech.com', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: form.querySelector('input[name="name"]').value,
+                    email: form.querySelector('input[name="email"]').value,
+                    message: form.querySelector('textarea[name="message"]').value,
+                    _subject: "New Consultation Request - FDI Technology"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Hide the form and show the success message
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+            })
+            .catch(error => {
+                // Fallback UI in case of network block (e.g., adblockers blocking the fetch)
+                console.error('Submission error:', error);
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+            });
         });
     </script>
 </body>
