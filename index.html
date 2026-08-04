@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDI Technology Sdn. Bhd. | Future Driven Innovations</title>
+    
+    <!-- Google Fonts: Inter and Rajdhani (for the tech headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        fdi: {
+                            orange: '#FF6600',
+                            orangeHover: '#E55C00',
+                            black: '#0A0A0A',
+                            dark: '#141414',
+                            card: '#1C1C1E',
+                            gray: '#A0A0A0',
+                            light: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #F5F5F7;
+        }
+        
+        /* Subtle background grid pattern */
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 102, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 102, 0, 0.03) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+        }
+
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: linear-gradient(145deg, #111111 0%, #0a0a0a 100%);
+            border: 1px solid rgba(255, 102, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(255, 102, 0, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px -10px rgba(255, 102, 0, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #A0A0A0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-mosaic {
+            background-image: url('images/Mosaic.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-fdi-orange selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <img src="images/FDI Logo.png" alt="FDI Logo" class="h-10 w-auto">
+                    <span class="font-tech font-bold text-2xl tracking-wide uppercase">FDI Technology Sdn. Bhd.</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-sm font-medium text-fdi-orange hover:text-white transition-colors uppercase tracking-wider">Home</a>
+                    <a href="#capabilities" class="text-sm font-medium text-fdi-light hover:text-fdi-orange transition-colors uppercase tracking-wider">Capabilities</a>
+                    <a href="#founder" class="text-sm font-medium text-fdi-light hover:text-fdi-orange transition-colors uppercase tracking-wider">Founder</a>
+                    <a href="#impact" class="text-sm font-medium text-fdi-light hover:text-fdi-orange transition-colors uppercase tracking-wider">Impact</a>
+                    <a href="#contact" class="px-5 py-2 rounded-sm bg-fdi-orange text-black text-sm font-bold hover:bg-fdi-orangeHover transition-all uppercase tracking-wider">
+                        Consultation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center bg-mosaic bg-black/80">
+            
+            <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
+                
+                <img src="images/Full Logo.png" alt="FDI Technology Full Logo" class="mx-auto h-24 md:h-32 mb-8 object-contain">
+                
+                <h1 class="font-tech text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 uppercase text-white leading-tight">
+                    Research Driven <br class="hidden md:block" />
+                    Intelligent Solutions
+                </h1>
+                
+                <p class="mt-4 max-w-3xl text-lg md:text-xl text-fdi-gray mx-auto mb-10 leading-relaxed font-mono text-sm md:text-base">
+                    We are a university approved start-up company that transforms proven university research into reliable digital services to create meaningful digital solutions.
+                </p>
+                
+                <div class="flex justify-center">
+                    <a href="#contact" class="px-8 py-4 rounded-sm bg-fdi-orange text-black font-tech text-lg font-bold hover:bg-fdi-orangeHover transition-all uppercase tracking-wider shadow-[0_0_20px_rgba(255,102,0,0.3)]">
+                        Book a Professional Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-white/5 bg-[#080808] py-12 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <h3 class="font-tech text-3xl font-bold uppercase tracking-wider">Trusted Partner</h3>
+                    <span class="text-fdi-orange font-mono text-sm tracking-widest uppercase">Licensed & Compliant</span>
+                </div>
+                
+                <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <a href="https://www.umpsa.edu.my" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
+                        <img src="images/UMPSA Logo.png" alt="UMPSA" class="h-16 w-auto object-contain">
+                    </a>
+                    <a href="https://caidas.umpsa.edu.my" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
+                        <img src="images/CAIDAS Logo.png" alt="CAIDaS" class="h-16 w-auto object-contain">
+                    </a>
+                    <a href="https://www.dvs.gov.my" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
+                        <img src="images/DVS Logo.jpeg" alt="DVS" class="h-16 w-auto object-contain">
+                    </a>
+                    <a href="https://www.trinoviklabs.com" target="_blank" rel="noopener noreferrer" class="block hover:scale-105 transition-transform">
+                        <img src="images/TL Logo.jpeg" alt="Trinovik Labs" class="h-16 w-auto object-contain">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-tech text-4xl md:text-5xl font-bold mb-12 uppercase tracking-wider text-white">Our Capabilities</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-8 md:p-10">
+                        <i class="ph ph-cube text-4xl text-fdi-orange mb-6 block"></i>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Blockchain Solutions</h3>
+                        <p class="text-fdi-gray font-mono text-sm leading-relaxed">Delivering secure blockchain and data solutions for financial records, supply chain management as well as data integrity.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card p-8 md:p-10">
+                        <i class="ph ph-graph text-4xl text-fdi-orange mb-6 block"></i>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Artificial Intelligence Solutions</h3>
+                        <p class="text-fdi-gray font-mono text-sm leading-relaxed">Deploying AI-led support tools for prediction, analytics, decision support systems as well as helpdesk solutions.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card p-8 md:p-10">
+                        <i class="ph ph-hard-drives text-4xl text-fdi-orange mb-6 block"></i>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Software Solutions</h3>
+                        <p class="text-fdi-gray font-mono text-sm leading-relaxed">Deploying enterprise-grade software for human resource, finance, training management and much more.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card p-8 md:p-10">
+                        <i class="ph ph-cpu text-4xl text-fdi-orange mb-6 block"></i>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Digital Modernization</h3>
+                        <p class="text-fdi-gray font-mono text-sm leading-relaxed">Leading complex digital transformation for municipalities, universities as well as enterprises.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="founder" class="py-24 bg-[#080808] relative border-y border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
+                    
+                    <div class="w-full lg:w-1/3">
+                        <div class="border-4 border-fdi-orange p-2 bg-black">
+                            <img src="images/Founder.png" alt="Prof Madya Dr. Mohamed Ariff Ameedeen" class="w-full h-auto object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Profile Details -->
+                    <div class="w-full lg:w-2/3 flex flex-col justify-center">
+                        <h2 class="font-tech text-3xl md:text-5xl font-bold text-white uppercase tracking-wider mb-2">Managing Director</h2>
+                        <h3 class="text-xl md:text-2xl text-white font-semibold mb-6">Prof. Madya Dr. Mohamed Ariff Ameedeen</h3>
+                        
+                        <div class="font-mono text-sm text-fdi-gray space-y-2 mb-10 uppercase tracking-wide">
+                            <p>Associate Professor | Faculty of Computing</p>
+                            <p>Universiti Malaysia Pahang Al-Sultan Abdullah</p>
+                            <p>Ph.D Computer Science (University of Birmingham, United Kingdom)</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <!-- Certifications -->
+                            <div>
+                                <h4 class="text-white font-bold mb-4 border-b border-fdi-orange/30 pb-2 inline-block">Professional Certifications</h4>
+                                <ul class="space-y-2 font-mono text-xs text-fdi-gray list-disc list-inside">
+                                    <li>CERTIPORT IT SPECIALIST - Data Analytics</li>
+                                    <li>CERTIPORT IT SPECIALIST - Cybersecurity</li>
+                                    <li>IBM Certified Solutions Advisor - Cloud</li>
+                                    <li>IBM Certified Database Associate</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Awards -->
+                            <div>
+                                <h4 class="text-white font-bold mb-4 border-b border-fdi-orange/30 pb-2 inline-block">Awards & Recognition</h4>
+                                <ul class="space-y-2 font-mono text-xs text-fdi-gray list-disc list-inside">
+                                    <li>GLOBAL CHAMPION 2025 - Global CIO Forum (2025)</li>
+                                    <li>LEGEND CIO - Global CIO Forum (2025)</li>
+                                    <li>TOP 100 CIO - CIO100 ASEAN (2024)</li>
+                                    <li>TOP 200 CIO - Digital Leaders Award (2024)</li>
+                                    <li>MASTER CIO - Global CIO Forum (2024)</li>
+                                    <li>NEXT-GEN CIO - Global CIO Forum (2023)</li>
+                                    <li>TOP 10 CIO Asia - CEO Insights (2022)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-12">
+                    <h2 class="font-tech text-4xl md:text-5xl font-bold mb-4 text-white uppercase tracking-wider">Our Impact</h2>
+                    <p class="text-fdi-gray font-mono text-sm max-w-3xl leading-relaxed">A proven record of delivering reliable, research-backed technology to solve critical challenges for major clients. Details available upon request.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project 01 -->
+                    <div class="glass-card p-8 border border-fdi-orange/40 hover:border-fdi-orange">
+                        <p class="text-fdi-orange font-mono text-xs mb-4 uppercase tracking-widest">Project 01: Blockchain</p>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Supply Chain Traceability For Export</h3>
+                        <p class="text-fdi-gray font-mono text-sm mb-8 leading-relaxed">Provided a blockchain based traceability system for a high-value commodity trade between two countries.</p>
+                        <p class="text-fdi-orange font-mono text-xs uppercase tracking-widest mt-auto font-bold">Success: Endorsed by 2 National Governments</p>
+                    </div>
+
+                    <!-- Project 02 -->
+                    <div class="glass-card p-8 border border-fdi-orange/40 hover:border-fdi-orange">
+                        <p class="text-fdi-orange font-mono text-xs mb-4 uppercase tracking-widest">Project 02: Artificial Intelligence</p>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Intelligent Maintenance Planning</h3>
+                        <p class="text-fdi-gray font-mono text-sm mb-8 leading-relaxed">Developed a forecasting tool to assist with predicting machine maintenance requirements to ensure no down-time occurs.</p>
+                        <p class="text-fdi-orange font-mono text-xs uppercase tracking-widest mt-auto font-bold">Success: Implemented at the Company</p>
+                    </div>
+
+                    <!-- Project 03 -->
+                    <div class="glass-card p-8 border border-fdi-orange/40 hover:border-fdi-orange">
+                        <p class="text-fdi-orange font-mono text-xs mb-4 uppercase tracking-widest">Project 03: Stable Systems</p>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Resource Planning</h3>
+                        <p class="text-fdi-gray font-mono text-sm mb-8 leading-relaxed">Designed and developed an entreprise resource planning system encompassing HR, Finance, Assets and Audits.</p>
+                        <p class="text-fdi-orange font-mono text-xs uppercase tracking-widest mt-auto font-bold">Success: Continuous & Uninterrupted Operations</p>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="glass-card p-8 border border-fdi-orange/40 hover:border-fdi-orange">
+                        <p class="text-fdi-orange font-mono text-xs mb-4 uppercase tracking-widest">Project 04: Digital Transformation</p>
+                        <h3 class="font-tech text-2xl font-bold mb-4 text-white uppercase tracking-wider">Smart Campus Blueprint</h3>
+                        <p class="text-fdi-gray font-mono text-sm mb-8 leading-relaxed">Designed and spearheaded a campus-wide systems and infrastructure digital transformation.</p>
+                        <p class="text-fdi-orange font-mono text-xs uppercase tracking-widest mt-auto font-bold">Success: Smart Campus Blueprint Designed and Executed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-[#050505] border-t border-white/10 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col lg:flex-row gap-16 mb-24 border-b border-white/10 pb-20">
+                
+                <!-- Contact Info Left -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="font-tech text-5xl font-bold text-white uppercase tracking-wider mb-6">Get in Touch</h2>
+                    <p class="text-fdi-gray font-mono text-sm mb-12">Contact our experts to discuss your agency's digital objectives.</p>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <p class="text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Location</p>
+                            <p class="text-white font-mono text-sm leading-relaxed max-w-sm">
+                                CAIDaS Office, Universiti Malaysia Pahang Al-Sultan Abdullah,<br>
+                                Persiaran Tun Khalil Yaakob, 26300 Kuantan, Pahang.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Communications</p>
+                            <a href="mailto:sales@fdi-tech.com" class="text-white font-mono text-sm hover:text-fdi-orange transition-colors">
+                                sales@fdi-tech.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Divider (Hidden on mobile) -->
+                <div class="hidden lg:block w-px bg-fdi-orange h-auto"></div>
+
+                <!-- Contact Form Right -->
+                <div class="w-full lg:w-1/2">
+                    <h3 class="font-tech text-2xl font-bold text-white uppercase tracking-wider mb-2">Consultation Request</h3>
+                    <p class="text-fdi-gray font-mono text-sm mb-8">Please fill out this form to inquire about our digital services.</p>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Name *</label>
+                            <input type="text" placeholder="YOUR NAME" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Email *</label>
+                            <input type="email" placeholder="YOUR EMAIL" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-fdi-orange font-mono text-xs uppercase tracking-widest mb-2">Message *</label>
+                            <textarea rows="4" placeholder="YOUR MESSAGE" class="w-full bg-transparent border border-white/20 p-4 text-white font-mono text-sm focus:outline-none focus:border-fdi-orange transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-fdi-orange text-black font-tech text-lg font-bold py-4 hover:bg-fdi-orangeHover transition-colors uppercase tracking-wider">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center flex flex-col items-center">
+                <img src="images/FDI Logo.png" alt="FDI Logo" class="h-12 w-auto mb-6">
+                
+                <div class="text-white font-mono text-xs space-y-1 mb-8 leading-relaxed">
+                    <p>FDI Technology Sdn. Bhd.</p>
+                    <p>CAIDaS Office, Universiti Malaysia Pahang Al-Sultan Abdullah,</p>
+                    <p>Persiaran Tun Khalil Yaakob, 26300 Kuantan, Pahang.</p>
+                    <p>EMAIL: sales@fdi-tech.com</p>
+                </div>
+
+                <p class="text-fdi-gray font-mono text-[10px] uppercase tracking-widest">
+                    © 2026 FDI TECHNOLOGY SDN. BHD. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle navigation background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg', 'bg-[#050505]');
+                nav.classList.remove('bg-black/85');
+            } else {
+                nav.classList.remove('shadow-lg', 'bg-[#050505]');
+                nav.classList.add('bg-black/85');
+            }
+        });
+    </script>
+</body>
+</html>
